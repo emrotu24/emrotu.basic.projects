@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-outline {
+  -webkit-text-stroke: 0.8px black; /* colore del bordo */
+}
+.text-outline-title {
+  -webkit-text-stroke: 0.7px white; /* colore del bordo */
+}
