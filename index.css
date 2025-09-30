@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.text-outline {
+.text-outline-black {
   -webkit-text-stroke: 1px black; /* colore del bordo */
 }
-.text-outline-title {
+.text-outline-white {
   -webkit-text-stroke: 1px white; /* colore del bordo */
 }
