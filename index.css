@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 .text-outline {
-  -webkit-text-stroke: 0.8px black; /* colore del bordo */
+  -webkit-text-stroke: 1px black; /* colore del bordo */
 }
 .text-outline-title {
-  -webkit-text-stroke: 0.7px white; /* colore del bordo */
+  -webkit-text-stroke: 1px white; /* colore del bordo */
 }
