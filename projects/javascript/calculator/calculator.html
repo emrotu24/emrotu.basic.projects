@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calcolatrice Javascript</title>
+  </head>
+  <body>
+    <h1>Calculator exercise</h1>
+    <div
+      style="
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        column-gap: 20px;
+        row-gap: 20px;
+      "
+    >
+      <button class="js-button-one">1</button>
+      <button class="js-button-two">2</button>
+      <button class="js-button-three">3</button>
+      <button class="js-minus-btn">-</button>
+      <button class="js-addition-btn">+</button>
+      <button class="js-multiply-btn">*</button>
+      <button class="js-divide-btn">/</button>
+      <button class="js-eqauls-btn">=</button>
+      <button class="js-clear-button">Clear</button>
+      <div class="total">TOTAL</div>
+    </div>
+    <script>
+      let calculation = '';
+      let total = document.querySelector('.total');
+
+      document.body.addEventListener('keydown', (event) => {
+        if (event.key === '1') {
+          calculation += '1';
+          total.innerHTML = calculation;
+        } else if (event.key === '2') {
+          calculation += '2';
+          total.innerHTML = calculation;
+        } else if (event.key === '3') {
+          calculation += '3';
+          total.innerHTML = calculation;
+        } else if (event.key === '-') {
+          calculation = total.innerHTML = `${calculation} - `;
+        } else if (event.key === '+') {
+          calculation = total.innerHTML = `${calculation} + `;
+        } else if (event.key === '*') {
+          calculation = total.innerHTML = `${calculation} * `;
+        } else if (event.key === '/') {
+          calculation = total.innerHTML = `${calculation} / `;
+        } else if (event.key === '=') {
+          calculation = total.innerHTML = eval(calculation);
+        } else if (event.key === 'c') {
+          calculation = '';
+          total.innerHTML = '';
+        }
+      });
+
+      const numOne = document.querySelector('.js-button-one');
+      numOne.addEventListener('click', () => {
+        calculation += '1';
+        total.innerHTML = calculation;
+      });
+
+      const numTwo = document.querySelector('.js-button-two');
+      numTwo.addEventListener('click', () => {
+        calculation += '2';
+        total.innerHTML = calculation;
+      });
+
+      const numThree = document.querySelector('.js-button-three');
+      numThree.addEventListener('click', () => {
+        calculation += '3';
+        total.innerHTML = calculation;
+      });
+
+      const minusButton = document.querySelector('.js-minus-btn');
+      minusButton.addEventListener('click', () => {
+        calculation = total.innerHTML = `${calculation} - `;
+      });
+
+      const addButton = document.querySelector('.js-addition-btn');
+      addButton.addEventListener('click', () => {
+        calculation = total.innerHTML = `${calculation} + `;
+      });
+
+      const multiplyButton = document.querySelector('.js-multiply-btn');
+      multiplyButton.addEventListener('click', () => {
+        calculation = total.innerHTML = `${calculation} * `;
+      });
+
+      const divideButton = document.querySelector('.js-divide-btn');
+      divideButton.addEventListener('click', () => {
+        calculation = total.innerHTML = `${calculation} / `;
+      });
+
+      const equalButton = document.querySelector('.js-eqauls-btn');
+      equalButton.addEventListener('click', () => {
+        calculation = total.innerHTML = eval(calculation);
+      });
+
+      const clearButton = document.querySelector('.js-clear-button');
+      clearButton.addEventListener('click', () => {
+        calculation = '';
+        total.innerHTML = '';
+      });
+    </script>
+  </body>
+</html>

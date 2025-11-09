@@ -1,0 +1,124 @@
+{
+  "tooltip": {
+    "language": "Change language",
+    "filter": "Filter projects",
+    "prevImg": "Previous image",
+    "nextImg": "Next Image"
+  },
+  
+  "navbar": {
+    "title": "EMANUELE ROTUNDI",
+    "theme": "Theme inspired to ~ Kobe Bryant",
+    "homepage": "Home",
+    "goals": "Goals",
+    "history": "History",
+    "projects": "Projects"
+  },
+
+  "home": {
+    "intro": {
+      "title": "BUILDING MY PATH",
+      "text": "Passionate about programming, with junior-level experience and a strong determination to build a solid career in development. I created this page to showcase what I can do. It was built with React and Tailwind, and in the “Projects” section you’ll find work done in other programming languages I know. I hope you enjoy it. feel free to get in touch!"
+    },
+    "knowledge": {
+      "title": "MY KNOWLEDGE",
+      "text": "For an overview of the languages I know how and when I learned them, and the projects connected to each - Click on this slide!."
+    },
+    "projects": {
+      "title": "PAST PROJECTS",
+      "text": "Explore completed projects – Click here!"
+    },
+    "working": {
+      "title": "WORKING ON IT",
+      "text": "To see what I’m currently working on - Click here!."
+    },
+    "knowme": {
+      "title": "GET TO KNOW ME BETTER",
+      "text": "To learn more about me, my roots, and my way of seeing things - Click here!."
+    }
+  },
+
+  "projects": {
+    "FliterStatus": {
+      "Completed": "Completed",
+      "In progress": "In progress",
+      "Future ideas": "Future ideas",
+      "all": "All"
+    },
+    "FilterTitle": {
+      "Completed": "PROJECTS THAT HAVE BEEN COMPLETED",
+      "In progress": "PROJECTS I'M CURRENTLY WORKING ON",
+      "Future ideas": "UPCOMING PROJECTS",
+      "all": "ALL MY PROJECTS"
+    },
+    "title": {
+      "project1": "Introduction to Web Design",
+      "project2": "Web Calculator",
+      "project3": "API Viewer",
+      "project4": "Rock Paper Scissors",
+      "project5": "Shopping List Manager",
+      "project6": "Task List",
+      "project7": "File Reader and Database Query",
+      "project8": "Unity Adventure",
+      "project9": "Android Mobile App",
+      "project10": "Java Project in Progress"
+    },
+    "description": {
+      "project1": "Introductory project showing how to build a static web page using HTML and custom CSS styling.",
+      "project2": "JavaScript project that simulates a real calculator with buttons, logic, and custom styling.",
+      "project3": "Responsive interface displaying updated data from external sources using JavaScript and Tailwind.",
+      "project4": "Challenge the computer in this classic game in a fast-paced match.",
+      "project5": "A simple app to create, edit, and check off shopping items. A great exercise in event handling and dynamic DOM updates.",
+      "project6": "Simple management of daily tasks with a clean design and intuitive features.",
+      "project7": "A PHP app that uploads Excel files and reads data from a MySQL database. Interface built with jQuery and Bootstrap.",
+      "project8": "A 3D survival and exploration game with resource gathering, crafting, and dynamic environments. Developed in Unity with C#.",
+      "project9": "A mobile app designed to offer a smooth and accessible user experience on Android devices.",
+      "project10": "A Java project under construction, designed to explore advanced concepts and modular design."
+    }
+  },
+
+  "dropdown": {
+    "contact": "Contacts"
+  },
+  
+  "history": {
+    "intro": {
+      "title": "RETURN TO THE ORIGIN",
+      "subtitle1": "Who I am.",
+      "subtitle2": "Where I come from.",
+      "subtitle3": "My way of seeing."
+    },
+    "bio": {
+      "title": "Biography",
+      "text": "I didn’t follow a straight path, and I’m proud of it. Every change helped me see the world better. A few years ago, I found my passion for work, and with effort and dedication, I entered the field. I’m a father, and that gives more meaning to everything I do. I want to build something important that my son can be proud of. This page is where I start, not where I finish."
+    },
+    "sections": {
+      "title": "VISION AND LESSONS",
+      "balance": {
+        "title": "Philosophies of Balance",
+        "text": "Eastern philosophies like Buddhism and Yin-Yang taught me that every action has weight, and that respect for oneself, others, and the world is the core of good coexistence."
+      },
+      "culture": {
+        "title": "Japanese Culture",
+        "text": "Japanese culture with martial arts, anime, and bonsai has given me deep values such as honor, dedication, and the beauty of detail."
+      },
+      "sport": {
+        "title": "Sport and Discipline",
+        "text": "Basketball was my first teacher of discipline. It taught me teamwork, consistency, and resilience. Leaving my country at 18 then brought me face to many challenges and responsibilities that helped me grow fast and understand myself better."
+      }
+    },
+    "gallery": {
+      "title": "OVERVIEW OF MY HOMETOWN"
+    },
+    "images": {
+      "ponteDelMare": "The Ponte del Mare is one of Pescara’s modern landmarks.",
+      "fromAbove": "From above, Pescara reveals its urban layout and coastline.",
+      "fromMountain": "From the surrounding mountains you can enjoy a panoramic view of the city."
+    }
+  },
+  
+  "footer": {
+    "rights": "All rights reserved."
+  }
+  
+}

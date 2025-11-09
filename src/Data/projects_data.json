@@ -1,0 +1,65 @@
+[
+  {
+    "title": "project9",
+    "status": "Future ideas",
+    "languages": "Java, Android Studio",
+    "description": "project9",
+    "link": ""
+  },
+  {
+    "title": "project10",
+    "status": "Future ideas",
+    "languages": "Java",
+    "description": "project10",
+    "link": ""
+  },
+  {
+    "title": "project1",
+    "status": "Completed",
+    "languages": "Html5, Css",
+    "description": "project1",
+    "link": "./projects/html-css-basics/index.html"
+  },
+  {
+    "title": "project2",
+    "status": "Completed",
+    "languages": "Html5, Css, Javascript",
+    "description": "project2",
+    "link": "./projects/javascript/calculator/index.html"
+  },
+  {
+    "title": "project3",
+    "status": "Completed",
+    "languages": "Html5, Tailwind, Javascript",
+    "description": "project3",
+    "link": "./projects/javascript/fetch-data-ajax-api/index.html"
+  },
+  {
+    "title": "project4",
+    "status": "Completed",
+    "languages": "Html5, Css, Javascript",
+    "description": "project4",
+    "link": "./projects/javascript/rock-scissor-paper/index.html"
+  },
+  {
+    "title": "project5",
+    "status": "In progress",
+    "languages": "Html5, Bootstrap, Javascript",
+    "description": "project5",
+    "link": "./projects/javascript/shopping-list/index.html"
+  },
+  {
+    "title": "project7",
+    "status": "In progress",
+    "languages": "Php, MySql, Bootstrap, JQuery",
+    "description": "project7",
+    "link": "https://my-php-jquery-jobs.infinityfreeapp.com/My%20php%20and%20jquery%20jobs/index.php"
+  },
+  {
+    "title": "project8",
+    "status": "In progress",
+    "languages": "C#, Unity",
+    "description": "project8",
+    "link": "./projects/unity-game/index.html"
+  }
+]

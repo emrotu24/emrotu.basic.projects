@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch external apis data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <h1 class="text-center text-6xl font-bold my-10">Fetch external apis data</h1>
+
+    <section class="gap-4 mx-5 w-full">
+
+        <div id="food-content" class="bg-lime-200 shadow-lg gap-4 py-4 px-4 rounded inline-block align-top w-[48%]">
+
+            <div class="grid grid-cols-3 items-center gap-4">
+                <input type="text" name="ingredient-name" id="ingredient-name" placeholder="Search dishes by a main ingredient" class="py-2 px-2 rounded shadow col-span-2">
+        
+                <button id="search-food-button" class="bg-green-600 rounded col-span-1 py-2 text-white font-bold hover:bg-green-400">
+                    Ottieni
+                </button>
+            </div>
+
+            <div id="food-results">
+
+                <ul id="meals-list" class="col-span-3"></ul>
+                <template id="meal-template" class="col-span-3 ">
+                    <li id="meal-item" class="flex flex-col items-center gap-4 mt-6">
+                        <h2 class="meal-title text-center text-4xl font-bold"></h2>
+                        <img src="" alt="" class="meal-image bg-cover h-fit w-full">
+                    </li>
+                </template>
+            </div>    
+        </div>
+        
+        <div id="drink-content" class="bg-indigo-200 shadow-lg py-4 px-4 rounded inline-block align-top w-[48%]">
+
+            <div class="grid grid-cols-3 items-center gap-4">
+                <input type="text" name="drink-name" id="drink-name" placeholder="Insert the name of a ingredient or a drink" class="py-2 px-2 rounded shadow col-span-2 hover:bg-slate-100">
+    
+                <button id="search-drink-button" class="bg-fuchsia-600 rounded col-span-1 text-white font-bold hover:bg-fuchsia-400 py-2">
+                    Ottieni
+                </button>
+            </div>
+
+            <div id="drink-results">
+
+                <ul id="drink-list"></ul>
+                <template id="drink-template">
+                    <li id="drink-item" class="flex flex-col gap-4 mt-6 pb-2 border-b-2 border-solid">
+                        <h2 class="drink-title text-center text-4xl font-bold"></h2>
+                        <img src="" alt="" class="drink-image bg-cover h-fit w-full">
+                        <div class="">
+                            <span class="font-semibold text-lg">Ingredients:</span>
+                            <span class="drink-ingredient1"></span>
+                            <span class="drink-ingredient2"></span>
+                            <span class="drink-ingredient3"></span>
+                            <span class="drink-ingredient4"></span>
+                            <span class="drink-ingredient5"></span>
+                            <span class="drink-ingredient6"></span>
+                            <span class="drink-ingredient7"></span>
+                            <span class="drink-ingredient8"></span>
+                            <span class="drink-ingredient9"></span>
+                            <span class="drink-ingredient10"></span>
+                            <span class="drink-ingredient11"></span>
+                            <span class="drink-ingredient12"></span>
+                            <span class="drink-ingredient13"></span>
+                            <span class="drink-ingredient14"></span>
+                            <span class="drink-ingredient15"></span>
+                        </div>
+                        <div>
+                            <span class="font-semibold text-lg">Description:</span>
+                            <span class="drink-instruction"></span>
+                        </div>
+                    </li>
+                </template>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+    <script src="index.js"></script>
+</html>

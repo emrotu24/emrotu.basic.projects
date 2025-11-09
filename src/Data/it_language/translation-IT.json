@@ -1,0 +1,124 @@
+{
+
+  "tooltip": {
+    "language": "Cambia lingua",
+    "filter": "Filtra i progetti",
+    "prevImg": "Immagine precedente",
+    "nextImg": "Immagine successiva"
+  },
+
+  "navbar": {
+    "title": "EMANUELE ROTUNDI",
+    "theme": "Tema ispirato a ~ Kobe Bryant",
+    "homepage": "Home",
+    "goals": "Obiettivi",
+    "history": "Storia",
+    "projects": "Progetti"
+  },
+
+  "home": {
+    "intro": {
+      "title": "COSTRUENDO IL MIO CAMMINO",
+      "text": "Appassionato di programmazione, con esperienza junior e una forte determinazione a costruire una carriera solida nel mondo dello sviluppo. Ho deciso di creare questa pagina per mostrare le mie competenze di base come programmatore. La pagina è realizzata con React e Tailwind, mentre nella sezione “Progetti” trovi lavori sviluppati con altri linguaggi che conosco. Spero ti piaccia! Non esitare a contattarmi."
+    },
+    "knowledge": {
+      "title": "LE MIE CONOSCENZE",
+      "text": "Per una panoramica sui linguaggi che conosco, come e quando li ho appresi e i progetti a cui sono legati - Clicca su questa diapositiva!."
+    },
+    "projects": {
+      "title": "PROGETTI REALIZZATI",
+      "text": "Esplora i progetti portati a termine – Clicca qui!"
+    },
+    "working": {
+      "title": "IN SVILUPPO",
+      "text": "Per vedere a cosa sto lavorando in questo momento - Clicca qui!."
+    },
+    "knowme": {
+      "title": "CONOSCIMI MEGLIO",
+      "text": "Per sapere di più su di me, le mie origini e il mio modo di vedere le cose - Clicca qui!."
+    }
+  },
+
+  "projects": {
+    "FliterStatus": {
+      "Completed": "Completato",
+      "In progress": "In corso",
+      "Future ideas": "Idee future",
+      "all": "Tutti"
+    },
+    "FilterTitle": {
+      "Completed": "PROGETTI CHE HO COMPLETATO",
+      "In progress": "PROGETTI SU CUI STO LAVORANDO",
+      "Future ideas": "PROSSIMI PROGETTI",
+      "all": "TUTTI I MIEI PROGETTI"
+    },
+    "title": {
+      "project1": "Introduzione al Web Design",
+      "project2": "Calcolatrice Web",
+      "project3": "Visualizzatore API",
+      "project4": "Sasso Carta Forbici",
+      "project5": "Gestione Lista Spesa",
+      "project6": "Lista Attività",
+      "project7": "Lettura File e Query Database",
+      "project8": "Avventura in Unity",
+      "project9": "App Mobile Android",
+      "project10": "Progetto Java in Cantiere"
+    },
+    "description": {
+      "project1":"Progetto introduttivo che mostra come costruire una pagina web statica con HTML e stili CSS personalizzati.",
+      "project2":"Progetto JavaScript che simula una calcolatrice reale con pulsanti, logica e stile personalizzato.",
+      "project3":"Interfaccia responsive che mostra dati aggiornati da fonti esterne usando JavaScript e Tailwind.",
+      "project4":"Sfida il computer in questo classico gioco contro il computer in una sfida veloce.",
+      "project5":"Un'app semplice per creare, modificare e spuntare gli articoli della spesa. Un ottimo esercizio per imparare a gestire eventi e aggiornare dinamicamente il DOM.",
+      "project6":"Gestione semplice delle attività quotidiane con un design pulito e funzionalità intuitive.",
+      "project7":"Un'app PHP che consente di caricare file Excel e leggere dati da un database MySQL. Interfaccia costruita con jQuery e Bootstrap.",
+      "project8":"Un gioco 3D di sopravvivenza ed esplorazione, con raccolta risorse, crafting e ambienti dinamici. Sviluppato in Unity con C#.",
+      "project9":"Un'app mobile progettata per offrire un'esperienza utente fluida e accessibile su dispositivi Android.",
+      "project10":"Un progetto Java in costruzione, pensato per esplorare concetti avanzati e design modulare."
+    }
+  },
+
+  "footer": {
+    "rights": "Tutti i diritti riservati."
+  },
+
+  "dropdown": {
+    "contact": "Contatti"
+  },
+
+  "history": {
+    "intro": {
+      "title": "RITORNO ALLE ORIGINI",
+      "subtitle1": "Chi sono.",
+      "subtitle2": "Da dove vengo.",
+      "subtitle3": "Il mio modo di vedere."
+    },
+    "bio": {
+      "title": "Biografia",
+      "text": "Non ho seguito un percorso lineare, e ne sono fiero. Ogni deviazione ha ampliato il mio sguardo sul mondo. Da qualche anno ho trovato la mia passione professionale e, con impegno e dedizione, sono riuscito a entrare nel settore. Sono padre e questo da un senso maggiore ad ogni cosa che faccio, vorrei creare qualcosa di importante e che mio figlio possa esserre orgoglioso di me. Questa pagina è il mio punto di partenza, non il traguardo."
+    },
+    "sections": {
+      "title": "VISIONE E INSEGNAMENTI",
+      "balance": {
+        "title": "Filosofie dell’equilibrio",
+        "text": "Le filosofie orientali come il Buddismo e lo Yin Yang mi hanno insegnato che ogni azione ha un peso, e che il rispetto per sé, per gli altri e per il mondo è il fulcro per una buona convivenza."
+      },
+      "culture": {
+        "title": "Cultura Giapponese",
+        "text": "La cultura giapponese, con le arti marziali, gli anime e i bonsai, mi ha trasmesso valori profondi come l’onore, la dedizione e la bellezza del dettaglio."
+      },
+      "sport": {
+        "title": "Sport e Disciplina",
+        "text": "Il basket è stato il mio primo maestro di disciplina. Mi ha insegnato il gioco di squadra, la costanza e la resilienza. Lasciare il mio paese a 18 anni poi mi ha posto davanti a diverse difficoltà e responsabilità che mi hanno aiutato a crescere velocemente ed a conoscermi meglio."
+      }
+    },
+    "gallery": {
+      "title": "PANORAMICA DELLA MIA CITTÀ D’ORIGINE"
+    },
+    "images": {
+      "ponteDelMare": "Il Ponte del Mare è uno dei simboli moderni di Pescara.",
+      "fromAbove": "Pescara vista dall’alto mostra la sua struttura urbana e la costa.",
+      "fromMountain": "Dalle montagne circostanti si gode di una vista panoramica sulla città."
+    }
+  }
+}
