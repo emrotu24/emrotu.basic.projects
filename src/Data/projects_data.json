@@ -18,35 +18,35 @@
     "status": "Completed",
     "languages": "Html5, Css",
     "description": "project1",
-    "link": "./projects/html-css-basics/index.html"
+    "link": "projects/html-css-basics/index.html"
   },
   {
     "title": "project2",
     "status": "Completed",
     "languages": "Html5, Css, Javascript",
     "description": "project2",
-    "link": "./projects/javascript/calculator/index.html"
+    "link": "projects/javascript/calculator/index.html"
   },
   {
     "title": "project3",
     "status": "Completed",
     "languages": "Html5, Tailwind, Javascript",
     "description": "project3",
-    "link": "./projects/javascript/fetch-data-ajax-api/index.html"
+    "link": "projects/javascript/fetch-data-ajax-api/index.html"
   },
   {
     "title": "project4",
     "status": "Completed",
     "languages": "Html5, Css, Javascript",
     "description": "project4",
-    "link": "./projects/javascript/rock-scissor-paper/index.html"
+    "link": "projects/javascript/rock-scissor-paper/index.html"
   },
   {
     "title": "project5",
     "status": "In progress",
     "languages": "Html5, Bootstrap, Javascript",
     "description": "project5",
-    "link": "./projects/javascript/shopping-list/index.html"
+    "link": "projects/javascript/shopping-list/index.html"
   },
   {
     "title": "project7",
@@ -60,6 +60,6 @@
     "status": "In progress",
     "languages": "C#, Unity",
     "description": "project8",
-    "link": "./projects/unity-game/index.html"
+    "link": "projects/unity-game/index.html"
   }
 ]

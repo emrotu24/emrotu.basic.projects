@@ -16,6 +16,8 @@ export default function ProjectsLayout() {
     const [filterStatus, setfilterStatus] = useState("");
     const [filterTitle, setfilterTitle] = useState("");
 
+    const base = process.env.PUBLIC_URL;
+
     const statusMap = {
         completed: { label: t('projects.FliterStatus.Completed'), value: 'Completed' },
         working: { label: t('projects.FliterStatus.In progress'), value: 'In progress' },
@@ -73,6 +75,7 @@ export default function ProjectsLayout() {
     }, []);
 
     return (
+
         <section>
             {/* Filtro */}
             <div className="fixed bg-white w-full top-14 lg:top-24 flex sm:flex-row items-center justify-center shadow-md py-2 gap-6 sm:gap-40 px-4 z-10 text-center">
@@ -115,7 +118,7 @@ export default function ProjectsLayout() {
             {/* Progetti */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-32 lg:mt-48 mb-5 mx-4 sm:mx-10">
                 {filteredProjects.map((projects, index) => (
-                    <a href={projects.link} target="_blank" rel="noopener noreferrer" key={index}>
+                    <a href={`${import.meta.env.BASE_URL}${projects.link}`} target="_blank" rel="noopener noreferrer" key={index}>
                         <section className="flex flex-col gap-1 py-3 px-2 hover:shadow-md hover:shadow-purple-800 transition-all border-b-4 border-purple-500 rounded-md sm:min-h-[6rem] lg:min-h-[8rem] overflow-hidden">
                             <h1 className="font-bold text-xl sm:text-3xl text-purple-800">
                                 {t(`projects.title.${projects.title}`)}
