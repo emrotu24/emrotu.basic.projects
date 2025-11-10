@@ -40,8 +40,8 @@ export default function Overview() {
                 <div className="absolute top-0 left-0 w-full h-full bg-black/20 z-10" />
 
                 <div className='flex flex-col items-center justify-center text-center gap-5'>
-                  <h1 className="z-10 text-xl md:text-2xl lg:text-5xl text-outline-white font-extrabold text-purple-600 mb-5">{t("home.intro.title")}</h1>
-                  <p className="z-10 text-base md:text-lg lg:text-2xl text-outline-black text-white font-extrabold mx-2 md:mx-8 lg:leading-relaxed">{t("home.intro.text")}</p>
+                  <h1 className="z-10 text-xl md:text-2xl lg:text-5xl text-shadow-black font-extrabold text-purple-600 mb-5">{t("home.intro.title")}</h1>
+                  <p className="z-10 text-base md:text-lg lg:text-2xl text-shadow-black text-white font-extrabold mx-2 md:mx-8 lg:leading-loose">{t("home.intro.text")}</p>
                 </div>
             </section>
 
@@ -74,10 +74,10 @@ export default function Overview() {
                     />
                     <div className="absolute top-0 left-0 w-full h-full bg-black/20 z-10" />
                     <div className="relative py-2 lg:py-12 z-20">
-                        <h2 className="group-hover:animate-bounce mb-8 font-extrabold text-outline-white text-purple-600 text-2xl lg:text-4xl">
+                        <h2 className="group-hover:animate-bounce mb-8 font-extrabold text-shadow-black text-purple-600 text-2xl lg:text-4xl">
                         {t("home.projects.title")}
                         </h2>
-                        <p className="text-base lg:text-2xl text-outline-black text-white font-extrabold mx-8 lg:leading-relaxed">
+                        <p className="text-base lg:text-2xl text-shadow-black text-white font-extrabold mx-8 lg:leading-relaxed">
                         {t("home.projects.text")}
                         </p>
                     </div>
@@ -111,10 +111,10 @@ export default function Overview() {
                     />
                     <div className="absolute top-0 left-0 w-full h-full bg-black/20 z-10" />
                     <div className="z-20 py-2 lg:py-12 gap-5">
-                        <h2 className="group-hover:animate-bounce font-extrabold mb-8 text-outline-white text-purple-600 text-2xl lg:text-4xl">
+                        <h2 className="group-hover:animate-bounce font-extrabold mb-8 text-shadow-black text-purple-600 text-2xl lg:text-4xl">
                         {t("home.working.title")}
                         </h2>
-                        <p className="text-base lg:text-2xl text-outline-black text-white font-extrabold mx-8 lg:leading-relaxed">
+                        <p className="text-base lg:text-2xl text-shadow-black text-white font-extrabold mx-8 lg:leading-relaxed">
                         {t("home.working.text")}
                         </p>
                     </div>
@@ -148,10 +148,10 @@ export default function Overview() {
                     />
                     <div className="absolute top-0 left-0 w-full h-full bg-black/20 z-10" />
                     <div className="z-20 py-2 lg:py-12 gap-5">
-                        <h2 className="group-hover:animate-bounce font-extrabold mb-8 text-outline-white text-purple-600 text-2xl lg:text-4xl">
+                        <h2 className="group-hover:animate-bounce font-extrabold mb-8 text-shadow-black text-purple-600 text-2xl lg:text-4xl">
                         {t("home.knowme.title")}
                         </h2>
-                        <p className="text-base lg:text-2xl text-outline-black text-white font-extrabold mx-8 lg:leading-relaxed">
+                        <p className="text-base lg:text-2xl text-shadow-black text-white font-extrabold mx-8 lg:leading-relaxed">
                         {t("home.knowme.text")}
                         </p>
                     </div>

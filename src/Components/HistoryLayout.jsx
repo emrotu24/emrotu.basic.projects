@@ -99,13 +99,13 @@ export default function HistoryLayout() {
       {/* INTRO */}
       <section className="relative grid grid-cols-1 md:grid-cols-2 h-auto overflow-hidden">
         <img className="w-full h-full object-cover" src={PescaraIntro} alt="PescaraIntro" />
-        <div className="absolute z-10 top-12 sm:top-28 md:top-6 lg:top-20 left-5 sm:left-10 flex flex-col gap-y-5 md:gap-y-8 xl:gap-y-14 italic text-sm lg:text-lg xl:text-2xl text-outline-black font-medium leading-relaxed animate-in slide-in-from-left duration-1000">
+        <div className="absolute z-10 top-12 sm:top-28 md:top-6 lg:top-20 left-5 sm:left-10 flex flex-col gap-y-5 md:gap-y-8 xl:gap-y-14 italic text-sm lg:text-lg xl:text-2xl text-shadow-white font-medium leading-relaxed animate-in slide-in-from-left duration-1000">
           <p>{t("history.intro.subtitle1")}</p>
           <p>{t("history.intro.subtitle2")}</p>
           <p>{t("history.intro.subtitle3")}</p>
         </div>
 
-        <p className="absolute z-10 backdrop-blur-sm left-1/4 md:left-1/3 top-1/2 text-2xl sm:text-4xl xl:text-6xl text-white font-extrabold text-outline-black animate-in slide-in-from-right duration-200">
+        <p className="absolute z-10 backdrop-blur-sm left-1/4 md:left-1/3 top-1/2 text-2xl sm:text-4xl xl:text-6xl text-white font-extrabold text-shadow-black animate-in slide-in-from-right duration-200">
           {t("history.intro.title")}
         </p>
         <img className="w-full h-full object-cover" src={PescaraView3} alt="PescaraView3" />
