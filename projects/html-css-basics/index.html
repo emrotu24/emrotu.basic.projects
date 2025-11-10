@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Html-Css basics</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <section class="Container">
+
+        <!-- testi -->
+        <div class="boxes">
+            <h1>TEXT</h1>
+            <h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, a.
+            </h2>
+            <h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, a.
+            </h3>
+            <h4>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, a.
+            </h4>
+            <a class="link1" href="https://www.amazon.it/" target="blank">Back to Amazon</a>
+            <h3>Nike Black Running Shoes</h3>
+            <p class="p1">$39 - in stock.</p>
+            <p class="p2">Free delivery tomorrow</p>  
+            <img src="google_logo.svg" alt="">
+        </div>
+
+        <!-- bottoni -->
+        <div class="boxes">
+            <h1>BUTTONS</h1>
+            <div class="sub-boxes">
+                <div>
+                    <button class="cart-button">Add to cart</button>
+                </div>
+                <div>
+                    <button class="buy-button">Buy now</button>
+                </div>
+                <div>        
+                    <button class="signup-button">Sign Up</button>
+                </div>
+                <div class="login-container">
+                    <button class="login-button">Log In</button>
+                </div>
+                <div class="click-b-container">    
+                    <button class="click-button">3D Click</button>
+                </div>
+                <div>
+                    <button class="triple-buttons">one</button>
+                    <button class="triple-buttons">two</button>
+                    <button class="triple-buttons">three</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forms -->
+        <div class="boxes">
+            <h1>FORMS</h1>
+            <div class="sub-boxes">
+                <form action="process.php" method="POST">
+                    <div>
+                        <label>First Name</label>
+                        <input type="text" name="firstName"
+                        placeholder="Enter your name">
+                    </div>
+                    <br>
+                    <div>
+                        <label>Last Name</label>
+                        <input type="text" name="lastName">
+                    </div>
+                    <br>
+                    <div>
+                        <label>Email</label>
+                        <input type="email" name="email">
+                    </div>
+                    <br>
+                    <div>
+                        <label>Message</label>
+                        <textarea name="message"></textarea>
+                    </div>
+                    <br>
+                    <div>
+                        <label>Gender</label>
+                        <select name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label>Age</label>
+                        <input type="number" name="age"
+                        value="27">
+                    </div>
+                    <br>
+                    <div>
+                        <label>Birthday</label>
+                        <input type="date" name="birthday">
+                    </div>
+                    <br>
+                    <input type="submit" name="submit"
+                    value="Submit">
+                </form>
+                <br>
+            </div>
+        </div>
+
+        <!-- inputs -->
+        <div class="boxes">
+            <h1>INPUTS</h1>
+            <div class="sub-boxes">
+                <div>    
+                    <input class="search-bar1" type="text" placeholder="search">
+                </div>
+                <div>
+                    <input class="search-bar2" type="text" placeholder="search google or type a URL">
+                </div>
+                <div> 
+                    <label>Email:</label>
+                    <input type="email" placeholder="Enter your e-mail address" name="Email">
+                </div>
+                <div class="Twitter-textarea">
+                    <img class="Cat-image3Twitter" src="./images/cat1.jpg" alt="A cat pic"> 
+                    <input class="search-bar2Twitter" type="text" placeholder="What's happening?">
+                    <button class="tweet-button">Tweet</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- blocks -->
+        <div class="boxes">
+            <h1>DISPLAY BLOCK AND INLINE-BLOCK</h1>
+            <div class="sub-boxes">
+                <div class="block-box">
+                    <input class="name-box" type="text" placeholder="Name">
+                    <input class="email-box" type="text" placeholder="Email">
+                </div>
+                <div class="inline-block-box">
+                    <p class="sixth-exercise-p">
+                        Thanks for chatting with our customer support. Would you like to take our quick survey?
+                    </p>
+                    <button>Yes</button>
+                    <button>No</button>
+                </div>
+                <div class="signup-form">
+                    <input class="First-Name-box" type="text" placeholder="First Name">
+                    <input class="Late-Name-box" type="text" placeholder="Late Name">
+                    <input class="Email-signupform-box" type="email" placeholder="Email">
+                    <button class="Signupform-button">Sign Up</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- cards -->
+        <div class="boxes">
+            <h1>CARDS</h1>
+            <div class="sub-boxes">
+                <div class="cards-boxes">
+                    <img class="card-image" src="./images/cat1.jpg" alt="A cat pic">
+                    <h5>Oliver</h5>
+                    <p>2 mutual friends</p>
+                    <button class="cards-buttons">Add Friend</button>
+                </div>
+                <div class="cards-boxes">
+                    <img class="card-image" src="./images/cat2.jpg" alt="A cat pic">
+                    <h5>Mimi</h5>
+                    <p>3 mutual friends</p>
+                    <button class="cards-buttons">Add Friend</button>
+                </div>
+                <div class="cards-boxes">
+                    <img class="card-image" src="./images/cat3.jpg" alt="A dog pic">
+                    <h5>Rex</h5>
+                    <p>5 mutual friends</p>
+                    <button class="cards-buttons">Add Friend</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- grid --> 
+        <div style="display: grid; 
+                    grid-template-columns: 1fr; 
+                    row-gap: 20px;
+                    border: 1px solid black;
+                    padding: 10px 5px;
+                    margin-bottom: 10px;">
+            <h1>GRID</h1>
+            <div style="display: grid;
+                        grid-template-columns: 200px 75px;">
+                <div style="background-color: aqua;">200px</div>
+                <div style="background-color: antiquewhite;">75px</div> 
+            </div>
+            <div style="display: grid;
+                        grid-template-columns: 50px 1fr 75px;">
+                <div style="background-color: aqua;">50px</div>
+                <div style="background-color: antiquewhite;">1fr</div>
+                <div style="background-color: lightgreen;">75px</div>
+            </div>
+            <div style="display: grid;
+                        grid-template-columns: 1fr 1fr 1fr 1fr;
+                        row-gap: 5px;
+                        column-gap: 10px;">
+                <div style="background-color: aqua;">1fr</div>
+                <div style="background-color: antiquewhite;">1fr</div>
+                <div style="background-color: lightgreen;">1fr</div>
+                <div style="background-color: lightgreen;">1fr</div>
+                <div style="background-color: aqua;">1fr</div>
+                <div style="background-color: antiquewhite;">1fr</div>
+                <div style="background-color: lightgreen;">1fr</div>
+                <div style="background-color: lightgreen;">1fr</div>
+            </div>
+
+            <div style="display: grid;
+                        grid-template-columns: 200px 200px 200px;
+                        column-gap: 10px;
+                        justify-content: center;">
+                <div class="cards-boxes">        
+                        <img class="woman-image" src="./images/dog1.jpg" alt="dog 1">
+                        <h5>Boy</h5>
+                    <div style="display: grid;
+                                grid-template-columns: 35px 1fr;
+                                align-items: center;">
+                        <img class="profile-picture" src="./images/dog1.jpg" alt="dog 1">
+                        <p style="color: gray;">2 mutual firends</p>
+                    </div>
+                        <button style="width: 100px;
+                                    margin-bottom: 4px;
+                                    margin-left: 4px;
+                                    padding: 6px;
+                                    background-color: blue;
+                                    color: aliceblue;
+                                    border: none;
+                                    cursor: pointer;">Add Friend</button>
+                </div>
+
+                <div class="cards-boxes">        
+                        <img class="woman-image" src="./images/dog2.jpg" alt="dog2">
+                        <h5>Frank</h5>
+                    <div style="display: grid;
+                                grid-template-columns: 35px 1fr;
+                                align-items: center;">
+                        <img class="profile-picture" src="./images/dog2.jpg" alt="dog2">
+                        <p style="color: gray;">11 mutual firends</p>
+                    </div>
+                        <button style="width: 100px;
+                                    margin-bottom: 4px;
+                                    margin-left: 4px;
+                                    padding: 6px;
+                                    background-color: blue;
+                                    color: aliceblue;
+                                    border: none;
+                                    cursor: pointer;">Add Friend
+                        </button>       
+                </div>
+                
+                <div class="cards-boxes">        
+                        <img class="woman-image" src="./images/dog3.jpg" alt="dog3">
+                        <h5>Missy</h5>
+                    <div style="display: grid;
+                                grid-template-columns: 35px 1fr;
+                                align-items: center;">
+                        <img class="profile-picture" src="./images/dog3.jpg" alt="dog3">
+                        <p style="color: gray;">0 mutual firends</p>
+                    </div>
+                        <button style="width: 100px;
+                                    margin-bottom: 4px;
+                                    margin-left: 4px;
+                                    padding: 6px;
+                                    background-color: blue;
+                                    color: aliceblue;
+                                    border: none;
+                                    cursor: pointer;">Add Friend
+                        </button>       
+                </div>
+            </div>
+        </div>
+
+        <!-- flexbox --> 
+        <div style="border: 1px solid darkgreen;
+                    padding: 10px 5px;
+                    margin-bottom: 10px;">
+            <h1>FLEXBOX</h1>
+            <div style="display: flex;">
+                <p style="width: 200px;
+                        background-color: burlywood;">200px</p>
+                <p style="width:75px;
+                        background-color:silver;">75px</p>
+            </div>
+            
+            <div style="display: flex;">
+                <p style="width: 50px;
+                        background-color: darksalmon;">Item1</p>
+                <p style="flex: 1;
+                        background-color: silver;">Item2</p>
+                <p style="width: 75px;
+                        background-color: dodgerblue;">Item3</p>
+            </div>
+
+            <div style="display: flex;
+                        justify-content: space-between;">
+                <p>Item1</p>
+                <p>Item2</p>
+                <p>Item3</p>
+                <p>Item4</p>
+            </div>
+
+            <div style="display: flex;
+                        justify-content: space-between;
+                        border: 1px solid gray;
+                        margin: 10px;">
+                <p style="background-color: coral;">Item1</p>
+                <p style="background-color: silver;">Item1</p>
+            </div>
+
+            <div style="display: flex;
+                        justify-content: space-between;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: 700;
+                        background-color: lightgoldenrodyellow;
+                        height: 100px;
+                        padding:5px;
+                        border: 1px solid lightblue;
+                        border-radius: 10px;
+                        margin: 5px;">
+
+                <div style="display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            justify-items: center;">
+                            <div>Home</div>
+                            <div>Notifications</div>
+                            <div>Messages</div>
+                </div>
+
+                <div style="display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            align-items: center;">
+                    <div style="border: none;
+                            background-color:red;
+                            color: white;
+                            padding: 2px 10px;
+                            border-radius: 10px;">14</div>
+                    <div style="border: none;
+                            background-color:red;
+                            color: white;
+                            padding: 2px 10px;
+                            border-radius: 10px;">3</div>
+                    <div style="border: none;
+                            background-color:red;
+                            color: white;
+                            padding: 2px 10px;
+                            border-radius: 10px;">5</div>
+                </div>
+            </div>
+
+            <div style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+                        margin: 10px;
+                        padding: 10px;">
+                <div class="cards-boxes" style="display: flex;
+                            font-family: Arial, Helvetica, sans-serif;
+                            margin-bottom: 10px;">
+                    <div style="display: flex;
+                                align-items: center;
+                                margin-right: 10px;">
+                        <img style="width: 70px;
+                                    height: 70px;
+                                    object-fit: cover;
+                                    border-radius: 35px;" src="./images/dog1.jpg" alt="dog 1">
+                    </div>
+                    <div style="display: flex;
+                                flex: 1;
+                                flex-direction: column;
+                                justify-content: space-between;">
+                        <div style="font-size: larger;
+                                    font-weight: bold;">Boy</div>
+                        <div style="font-size: normal;
+                                    color: gray;">Funny dog</div>
+                        <div style="font-size: small;
+                                    color: gray;">Popular</div>
+                    </div>
+                    <div style="display: flex;
+                                align-items: center;">
+                        <button style="width: 100px;
+                                    margin-bottom: 4px;
+                                    margin-left: 4px;
+                                    padding: 10px 2px;
+                                    background-color: blue;
+                                    color: aliceblue;
+                                    border: none;
+                                    cursor: pointer;">Add Friend
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cards-boxes" style="display: flex;
+                            font-family: Arial, Helvetica, sans-serif;
+                            margin-bottom: 10px">
+                    <div style="display: flex;
+                                align-items: center;
+                                margin-right: 10px;">
+                        <img style="width: 70px;
+                                    height: 70px;
+                                    object-fit: cover;
+                                    border-radius: 35px;" src="./images/dog2.jpg" alt="dog2">
+                    </div>
+                    <div style="display: flex;
+                                flex: 1;
+                                flex-direction: column;
+                                justify-content: space-between;">
+                        <div style="font-size: larger;
+                                    font-weight: bold;">Frank</div>
+                        <div style="font-size: normal;
+                                    color: gray;">Curios dog</div>
+                        <div style="font-size: small;
+                                    color: gray;">Popular</div>
+                    </div>
+                    <div style="display: flex;
+                                align-items: center;">
+                        <button style="width: 100px;
+                                    margin-bottom: 4px;
+                                    margin-left: 4px;
+                                    padding: 10px 2px;
+                                    background-color: blue;
+                                    color: aliceblue;
+                                    border: none;
+                                    cursor: pointer;">Add Friend
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cards-boxes" style="display: flex;
+                            font-family: Arial, Helvetica, sans-serif;">
+                    <div style="display: flex;
+                                align-items: center;
+                                margin-right: 10px;">
+                        <img style="width: 70px;
+                                    height: 70px;
+                                    object-fit: cover;
+                                    border-radius: 35px;" src="./images/dog3.jpg" alt="dog 3">
+                    </div>
+                    <div style="display: flex;
+                                flex: 1;
+                                flex-direction: column;
+                                justify-content: space-between;">
+                        <div style="font-size: larger;
+                                    font-weight: bold;">Missy</div>
+                        <div style="font-size: normal;
+                                    color: gray;">Sweety dog</div>
+                        <div style="font-size: small;
+                                    color: gray;">Popular</div>
+                    </div>
+                    <div style="display: flex;
+                                align-items: center;">
+                        <button style="width: 100px;
+                                    margin-bottom: 4px;
+                                    margin-left: 4px;
+                                    padding: 10px 2px;
+                                    background-color: blue;
+                                    color: aliceblue;
+                                    border: none;
+                                    cursor: pointer;">Add Friend
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- css positions -->
+        <div class="boxes">
+            <h1>POSITIONS FIXED, RELATIVE AND ABSOLUTE</h1>
+            <div class="sub-boxes">
+
+                <div style="position: fixed;
+                            right: 20px;
+                            bottom: 20px;
+                            background-color: black;
+                            color: white;">Position Fixed
+                </div>
+    
+                <div style="position: fixed;
+                            left: 0;
+                            bottom: 0;
+                            top: 0;
+                            width: 96px;
+                            background-color: darkmagenta;
+                            color: antiquewhite;
+                            z-index: 100;">
+                    Position Fixed SIDEBAR
+                </div>
+    
+                <div style="position: fixed;
+                            left: 96PX;
+                            top: 0;
+                            height: 70PX;
+                            right: 0;
+                            background-color: darkblue;
+                            text-align: center;
+                            color: antiquewhite;
+                            z-index: 100;">
+                    Position Fixed HEADER
+                </div>
+    
+               
+                <div style="background-color: rgb(223, 220, 220);
+                            width: 70px;
+                            height: 100px;
+                            right: 0;
+                            bottom: 50%;
+                            top: 50%;
+                            border-radius: 10px;
+                            padding: 10px 55px 10px 5px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: start;
+                            justify-content: space-between;
+                            position: fixed;
+                            ">
+                    <div>Position fixed</div>
+                    <div>Overlay</div>
+                    <div><button>Close</button></div>
+                </div>
+    
+                <div style="width: 320px;
+                            height: 180px;
+                            background-color: rgb(169, 226, 207);
+                            margin: 10px;
+                            display: inline-block;
+                            vertical-align: middle;
+                            position: relative;
+                            ">
+                    <button style="color: antiquewhite;
+                        background-color: black;
+                        border-radius: 20px;
+                        width: 40px;
+                        height: 40px;
+                        border: none;
+                        font-size: larger;
+                        cursor: pointer;
+                        display: inline-block;
+                        position: absolute;
+                        right: -15px;
+                        top: -15px;">
+                    X</button>
+                    <div style="color: antiquewhite;
+                        background-color: rgba(0, 0, 0, 0.8);
+                        display: inline-block;
+                        position: absolute;
+                        bottom: 8px;
+                        right: 8px;
+                        padding: 4px 10px;">
+                    0:29</div>
+                </div>
+    
+                <div style="position: relative;
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin: 10px;">
+                    <img style="width: 340px;
+                            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+                    " src="./images/Clothing.jpg" alt="Clothing discount image">
+                    <div style="display: inline-block;
+                    color: antiquewhite;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    position: absolute;
+                    top: 20px;
+                    right: 0;
+                    font-size: small;
+                    padding: 4px 10px;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                    20% OFF</div>
+                    <div style="background-color: rgba(221, 221, 221, 0.8);
+                                bottom: 4px;
+                                right: 0;
+                                left: 0;
+                                height: 40px;
+                                position: absolute;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;">
+                        <button class="cart-button">Add to Cart</button>
+                    </div>
+                    <div style="position: absolute;
+                                font-family: Arial, Helvetica, sans-serif;
+                                color:black ;
+                                font-size: 10px;
+                                font-weight: 900;
+                                top: 20px;
+                                left: 20px;
+                                text-align: center;
+                                ">Maglione girocollo 
+                                <br>
+                                9.99$</div>
+                    <div style="position: absolute;
+                                font-family: Arial, Helvetica, sans-serif;
+                                color:black ;
+                                font-size: 10px;
+                                font-weight: 900;
+                                bottom: 50px;
+                                right: 40px;
+                                text-align: center;
+                                "> <a href="https://www.amazon.it/" target="blank">Jeans
+                                <br>
+                                14.99$</a></div>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center;">&copy; 2025 Emanuele Rotundi Workhouse. All rights reserved.</p>
+    </section>
+</body>
+</html>

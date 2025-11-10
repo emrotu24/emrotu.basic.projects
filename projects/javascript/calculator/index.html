@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calcolatrice Javascript</title>
+    <link rel="stylesheet" href="calculator.css">
+  </head>
+  <body>
+    <div class="calculator-container">
+      <h1>Calculator</h1>
+      <div class="display total" id="display">0</div>
+      <div class="button-grid">
+        <button class="js-button-one">1</button>
+        <button class="js-button-two">2</button>
+        <button class="js-button-three">3</button>
+        <button class="js-addition-btn">+</button>
+        <button class="js-button-four">4</button>
+        <button class="js-button-five">5</button>
+        <button class="js-button-six">6</button>
+        <button class="js-minus-btn">-</button>
+        <button class="js-button-seven">7</button>
+        <button class="js-button-eight">8</button>
+        <button class="js-button-nine">9</button>
+        <button class="js-multiply-btn">*</button>
+        <button class="js-button-zero">0</button>
+        <button class="js-percentage-btn">%</button>
+        <button class="js-equals-btn">=</button>
+        <button class="js-divide-btn">/</button>
+        <button class="backspace js-backspace-btn">Del</button>
+        <button class="clear js-clear-button">Clear</button>
+      </div>
+    </div>
+
+    <script>
+      let calculation = '';
+      let total = document.querySelector('.total');
+
+      document.body.addEventListener('keydown', (event) => {
+        if (event.key === '0') {
+          calculation += '0';
+          total.innerHTML = calculation;
+          pressEffect('.js-button-zero');
+          total.classList.remove('error');
+
+        } else if (event.key === '1') {
+          calculation += '1';
+          total.innerHTML = calculation;
+          pressEffect('.js-button-one');
+          total.classList.remove('error');
+
+        } else if (event.key === '2') {
+          calculation += '2';
+          total.innerHTML = calculation;
+          pressEffect('.js-button-two');
+          total.classList.remove('error');
+
+        } else if (event.key === '3') {
+          calculation += '3';
+          total.innerHTML = calculation;
+          pressEffect('.js-button-three');
+          total.classList.remove('error');
+
+        } else if (event.key === '4') {
+          calculation += '4';
+          total.innerHTML = calculation;
+          pressEffect('.js-button-four');
+          total.classList.remove('error');
+
+        } else if (event.key === '5') {
+          calculation += '5';
+          total.innerHTML = calculation;
+          pressEffect('.js-button-five');
+
+        } else if (event.key === '6') {
+          calculation += '6';
+          total.innerHTML = calculation;
+          pressEffect('.js-button-six');
+          total.classList.remove('error');
+
+        } else if (event.key === '7') {
+          calculation += '7';
+          total.innerHTML = calculation;
+          pressEffect('.js-button-seven');
+          total.classList.remove('error');
+
+        } else if (event.key === '8') {
+          calculation += '8';
+          total.innerHTML = calculation;
+          pressEffect('.js-button-eight');
+          total.classList.remove('error');
+
+        } else if (event.key === '9') {
+          calculation += '9';
+          total.innerHTML = calculation;
+          pressEffect('.js-button-nine');
+          total.classList.remove('error');
+
+        } else if (event.key === '-') {
+          calculation = total.innerHTML = `${calculation} - `;
+          pressEffect('.js-minus-btn');
+          total.classList.remove('error');
+
+        } else if (event.key === '+') {
+          calculation = total.innerHTML = `${calculation} + `;
+          pressEffect('.js-addition-btn');
+          total.classList.remove('error');
+
+        } else if (event.key === '*') {
+          calculation = total.innerHTML = `${calculation} * `;
+          pressEffect('.js-multiply-btn');
+          total.classList.remove('error');
+
+        } else if (event.key === '/') {
+          calculation = total.innerHTML = `${calculation} / `;
+          pressEffect('.js-divide-btn');
+          total.classList.remove('error');
+
+        } else if (event.key === '%') {
+          calculation = total.innerHTML = `${calculation} % `;
+          pressEffect('.js-percentage-btn');
+          total.classList.remove('error');
+
+        } else if (event.key === '(') {
+          calculation = total.innerHTML = `${calculation} ( `;
+          total.classList.remove('error');
+        } else if (event.key === ')') {
+          calculation = total.innerHTML = `${calculation} ) `;
+          total.classList.remove('error');
+
+        } else if (event.key === 'Enter') {
+          const check = isValidExpression(calculation); // Verifica PRIMA
+          total.innerHTML = check.result;
+          pressEffect('.js-equals-btn');
+          total.classList.remove('error');
+          if (check.valid) {
+            calculation = check.result;
+            total.classList.remove('error');
+          } else {
+            calculation = '';
+            total.classList.add('error');
+          }
+        } else if (event.key === 'Backspace') {
+          calculation = calculation.slice(0, -1);
+          total.innerHTML = calculation || '0';
+          pressEffectDelete('.js-backspace-btn');
+          total.classList.remove('error');
+        } else if (event.key === 'Delete') {
+          calculation = '';
+          total.innerHTML = '0';
+          pressEffectClear('.js-clear-button');
+          total.classList.remove('error');
+        }
+      });
+
+      function pressEffect(selector) {
+        const button = document.querySelector(selector);
+        if (button) {
+          button.classList.add('pressed');
+          setTimeout(() => {
+            button.classList.remove('pressed');
+          }, 150); // durata dell'effetto
+        }
+      }
+
+      function pressEffectClear(selector) {
+        const button = document.querySelector(selector);
+        if (button) {
+          button.classList.add('pressed-clear');
+          setTimeout(() => {
+            button.classList.remove('pressed-clear');
+          }, 150); // durata dell'effetto
+        }
+      }
+
+      function pressEffectDelete(selector) {
+        const button = document.querySelector(selector);
+        if (button) {
+          button.classList.add('pressed-backspace');
+          setTimeout(() => {
+            button.classList.remove('pressed-backspace');
+          }, 150); // durata dell'effetto
+        }
+      }
+
+      function hasBalancedParentheses(expr) {
+        let count = 0;
+        for (let char of expr) {
+          if (char === '(') count++;
+          if (char === ')') count--;
+          if (count < 0) return false;
+        }
+        return count === 0;
+      }
+
+      function isValidExpression(expression) {
+        if (!expression.trim()) {
+          return { valid: false, result: 'Error' };
+        }
+
+        if (!/^[0-9+\-*/%.() ]+$/.test(expression)) {
+          return { valid: false, result: 'Error' };
+        }
+
+        if (!hasBalancedParentheses(expression)) {
+          return { valid: false, result: 'Error' };
+        }
+
+        try {
+          const result = Function('"use strict"; return (' + expression + ')')();
+          if (isNaN(result) || !isFinite(result)) {
+            return { valid: false, result: 'Error' };
+          }
+          return { valid: true, result };
+        } catch (e) {
+          return { valid: false, result: 'Error' };
+        }
+      }
+
+      const numZero = document.querySelector('.js-button-zero');
+      numZero.addEventListener('click', () => {
+        calculation += '0';
+        total.innerHTML = calculation;
+        total.classList.remove('error');
+      });
+
+      const numOne = document.querySelector('.js-button-one');
+      numOne.addEventListener('click', () => {
+        calculation += '1';
+        total.innerHTML = calculation;
+        total.classList.remove('error');
+      });
+
+      const numTwo = document.querySelector('.js-button-two');
+      numTwo.addEventListener('click', () => {
+        calculation += '2';
+        total.innerHTML = calculation;
+        total.classList.remove('error');
+      });
+
+      const numThree = document.querySelector('.js-button-three');
+      numThree.addEventListener('click', () => {
+        calculation += '3';
+        total.innerHTML = calculation;
+        total.classList.remove('error');
+      });
+
+      const numFour = document.querySelector('.js-button-four');
+      numFour.addEventListener('click', () => {
+        calculation += '4';
+        total.innerHTML = calculation;
+        total.classList.remove('error');
+      });
+      const numFive = document.querySelector('.js-button-five');
+      numFive.addEventListener('click', () => {
+        calculation += '5';
+        total.innerHTML = calculation;
+        total.classList.remove('error');
+      });
+      const numSix = document.querySelector('.js-button-six');
+      numSix.addEventListener('click', () => {
+        calculation += '6';
+        total.innerHTML = calculation;
+        total.classList.remove('error');
+      });
+      const numSeven = document.querySelector('.js-button-seven');
+      numSeven.addEventListener('click', () => {
+        calculation += '7';
+        total.innerHTML = calculation;
+        total.classList.remove('error');
+      });
+      const numEight = document.querySelector('.js-button-eight');
+      numEight.addEventListener('click', () => {
+        calculation += '8';
+        total.innerHTML = calculation;
+        total.classList.remove('error');
+      });
+      const numNine = document.querySelector('.js-button-nine');
+      numNine.addEventListener('click', () => {
+        calculation += '9';
+        total.innerHTML = calculation;
+        total.classList.remove('error');
+      });
+
+      const minusButton = document.querySelector('.js-minus-btn');
+      minusButton.addEventListener('click', () => {
+        calculation = total.innerHTML = `${calculation} - `;
+        total.classList.remove('error');
+      });
+
+      const addButton = document.querySelector('.js-addition-btn');
+      addButton.addEventListener('click', () => {
+        calculation = total.innerHTML = `${calculation} + `;
+        total.classList.remove('error');
+      });
+
+      const multiplyButton = document.querySelector('.js-multiply-btn');
+      multiplyButton.addEventListener('click', () => {
+        calculation = total.innerHTML = `${calculation} * `;
+        total.classList.remove('error');
+      });
+
+      const divideButton = document.querySelector('.js-divide-btn');
+      divideButton.addEventListener('click', () => {
+        calculation = total.innerHTML = `${calculation} / `;
+        total.classList.remove('error');
+      });
+
+      const percentageButton = document.querySelector('.js-percentage-btn');
+      percentageButton.addEventListener('click', () => {
+        calculation = total.innerHTML = `${calculation} % `;
+        total.classList.remove('error');
+      });
+
+      const equalButton = document.querySelector('.js-equals-btn');
+      equalButton.addEventListener('click', () => {
+        const check = isValidExpression(calculation); // verifica PRIMA
+
+        total.innerHTML = check.result;
+        pressEffect('.js-equals-btn');
+
+        if (check.valid) {
+          calculation = check.result;
+          total.classList.remove('error');
+        } else {
+          calculation = '';
+          total.classList.add('error');
+        }
+      });
+
+      const backspaceButton = document.querySelector('.js-backspace-btn');
+      backspaceButton.addEventListener('click', () => {
+        calculation = calculation.slice(0, -1);
+        total.innerHTML = calculation || '0';
+      });
+
+      const clearButton = document.querySelector('.js-clear-button');
+      clearButton.addEventListener('click', () => {
+        calculation = '';
+        total.innerHTML = '0';
+      });
+    </script>
+  </body>
+</html>
