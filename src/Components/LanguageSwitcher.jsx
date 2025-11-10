@@ -24,10 +24,20 @@ const LanguageSwitcher = () => {
     setOpen(false);
   };
 
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
       <div className="flex flex-col md:flex md:flex-row gap-2 justify-center">
-        <button onClick={() => setOpen(!open)} className="flex items-center  gap-1 px-2 py-1 rounded hover:bg-purple-700 transition"
-          data-tooltip-id="my-tooltip" data-tooltip-content={!open ? t('tooltip.language') : undefined}>
+        <button onClick={() => setOpen(!open)}  className="flex items-center  gap-1 px-2 py-1 rounded hover:bg-purple-700 transition"
+          data-tooltip-id="my-tooltip" data-tooltip-content={!open && isLargeScreen ? t('tooltip.language') : undefined}>
           <Tooltip id="my-tooltip" className='!text-sm'/>
           <GlobeAltIcon className="h-3 xl:h-5 text-white" />
           <span className="uppercase text-xs xl:text-base font-semibold text-white">{currentLang}</span>

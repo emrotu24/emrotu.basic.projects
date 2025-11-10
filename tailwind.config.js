@@ -12,6 +12,8 @@ module.exports = {
     extend: {
       fontFamily: {
         signature: ['Dancing Script', 'cursive'],
+        georgia: ['Georgia', 'serif'],
+        system: ['system-ui'],
       }
     },
   },

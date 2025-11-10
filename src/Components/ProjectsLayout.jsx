@@ -16,8 +16,6 @@ export default function ProjectsLayout() {
     const [filterStatus, setfilterStatus] = useState("");
     const [filterTitle, setfilterTitle] = useState("");
 
-    const base = process.env.PUBLIC_URL;
-
     const statusMap = {
         completed: { label: t('projects.FliterStatus.Completed'), value: 'Completed' },
         working: { label: t('projects.FliterStatus.In progress'), value: 'In progress' },
@@ -74,19 +72,29 @@ export default function ProjectsLayout() {
         };
     }, []);
 
+    const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
+
+    useEffect(() => {
+        const handleResize = () => {
+        setIsLargeScreen(window.innerWidth >= 1024);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
 
         <section>
             {/* Filtro */}
             <div className="fixed bg-white w-full top-14 lg:top-24 flex sm:flex-row items-center justify-center shadow-md py-2 gap-6 sm:gap-40 px-4 z-10 text-center">
-                <div className="relative sm:text-lg md:text-3xl font-medium drop-shadow-md py-2">
+                <div className="relative text-sm md:text-lg lg:text-3xl font-medium drop-shadow-md py-2">
                     {filterTitle}
                 </div>
 
                 <div
-                    className="relative bg-yellow-300 flex gap-2 items-center text-sm md:text-base justify-center py-1 px-1 rounded-sm shadow-md cursor-pointer hover:bg-yellow-200 w-[140px]"
+                    className="relative bg-yellow-300 flex gap-2 items-center text-xs md:text-base justify-center py-1 px-1 rounded-sm shadow-md cursor-pointer hover:bg-yellow-200 min-w-[120px] max-w-[160px]"
                     data-tooltip-id="filter-tooltip"
-                    data-tooltip-content={!open ? t('tooltip.filter') : undefined}
+                    data-tooltip-content={!open && isLargeScreen ? t('tooltip.filter') : undefined}
                     onClick={() => setOpen(prev => !prev)}
                     ref={filterButtonRef}
                 >
@@ -97,7 +105,7 @@ export default function ProjectsLayout() {
                     />
 
                     {open && (
-                        <ul className="absolute py-2 w-full left-0 top-12 bg-yellow-300 shadow-lg" ref={filterMenuRef}>
+                        <ul className="absolute py-2 w-full left-0 top-8 md:top-10 bg-yellow-300 shadow-lg" ref={filterMenuRef}>
                             <li className="hover:bg-yellow-200 text-center px-2 py-1 cursor-pointer" onClick={() => HandleFilter('all')}>
                                 {t('projects.FliterStatus.all')}
                             </li>
@@ -117,27 +125,50 @@ export default function ProjectsLayout() {
 
             {/* Progetti */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-32 lg:mt-48 mb-5 mx-4 sm:mx-10">
-                {filteredProjects.map((projects, index) => (
-                    <a href={`${import.meta.env.BASE_URL}${projects.link}`} target="_blank" rel="noopener noreferrer" key={index}>
-                        <section className="flex flex-col gap-1 py-3 px-2 hover:shadow-md hover:shadow-purple-800 transition-all border-b-4 border-purple-500 rounded-md sm:min-h-[6rem] lg:min-h-[8rem] overflow-hidden">
-                            <h1 className="font-bold text-xl sm:text-3xl text-purple-800">
-                                {t(`projects.title.${projects.title}`)}
-                            </h1>
-                            <div className="flex flex-wrap gap-5 sm:gap-14 mb-2">
-                                <p className={projects.status === 'Completed' ? 'text-green-500 font-semibold' :
-                                            projects.status === 'In progress' ? 'text-yellow-500 font-semibold' :
-                                            'text-red-500 font-semibold'}>
-                                    {t(`projects.FliterStatus.${projects.status}`)}
-                                </p>
-                                <p className="text-neutral-400 italic">{projects.languages}</p>
-                            </div>
-                            <h3 className="text-sm sm:text-base line-clamp-2">
-                                {t(`projects.description.${projects.description}`)}
-                            </h3>
-                        </section>
+                {filteredProjects.map((projects, index) => {
+                    const isClickable = projects.link && projects.link.trim() !== '';
+
+                    const sectionContent = (
+                    <section
+                        className={`flex flex-col gap-1 py-3 px-2 transition-all rounded-md sm:min-h-[6rem] lg:min-h-[8rem] overflow-hidden
+                        ${isClickable ? 'hover:shadow-md hover:shadow-purple-800 border-b-4 border-purple-500' : 'opacity-50 cursor-not-allowed border-b-4 border-gray-400'}`}
+                    >
+                        <h1 className={`font-bold text-xl sm:text-3xl ${isClickable ? 'text-purple-800' : 'text-gray-500'}`}>
+                        {t(`projects.title.${projects.title}`)}
+                        </h1>
+                        <div className="flex flex-wrap gap-5 sm:gap-14 mb-2">
+                        <p className={
+                            projects.status === 'Completed' ? 'text-green-500 font-semibold' :
+                            projects.status === 'In progress' ? 'text-yellow-500 font-semibold' :
+                            'text-red-500 font-semibold'
+                        }>
+                            {t(`projects.FliterStatus.${projects.status}`)}
+                        </p>
+                        <p className="text-neutral-400 italic">{projects.languages}</p>
+                        </div>
+                        <h3 className="text-sm sm:text-base line-clamp-2">
+                        {t(`projects.description.${projects.description}`)}
+                        </h3>
+                    </section>
+                    );
+
+                    return isClickable ? (
+                    <a
+                        href={`${import.meta.env.BASE_URL}${projects.link}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        key={index}
+                    >
+                        {sectionContent}
                     </a>
-                ))}
+                    ) : (
+                    <div key={index}>
+                        {sectionContent}
+                    </div>
+                    );
+                })}
             </div>
+
         </section>
     );
 }

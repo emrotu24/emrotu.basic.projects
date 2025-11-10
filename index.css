@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .text-outline-black {
   -webkit-text-stroke: 1px black; /* colore del bordo */
 }

@@ -81,6 +81,16 @@ export default function HistoryLayout() {
     handleManualChange((currentIndex + 1) % images.length);
   };
 
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
+
+  useEffect(() => {
+      const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024);
+      };
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const { src, alt, description } = images[currentIndex];
 
   return (
@@ -89,7 +99,7 @@ export default function HistoryLayout() {
       {/* INTRO */}
       <section className="relative grid grid-cols-1 md:grid-cols-2 h-auto overflow-hidden">
         <img className="w-full h-full object-cover" src={PescaraIntro} alt="PescaraIntro" />
-        <div className="absolute z-10 top-12 sm:top-28 md:top-6 lg:top-20 left-5 sm:left-10 flex flex-col gap-y-10 lg:gap-y-8 xl:gap-y-20 italic text-sm lg:text-lg xl:text-2xl text-outline-black font-medium leading-relaxed animate-in slide-in-from-left duration-1000">
+        <div className="absolute z-10 top-12 sm:top-28 md:top-6 lg:top-20 left-5 sm:left-10 flex flex-col gap-y-5 md:gap-y-8 xl:gap-y-14 italic text-sm lg:text-lg xl:text-2xl text-outline-black font-medium leading-relaxed animate-in slide-in-from-left duration-1000">
           <p>{t("history.intro.subtitle1")}</p>
           <p>{t("history.intro.subtitle2")}</p>
           <p>{t("history.intro.subtitle3")}</p>
@@ -106,7 +116,7 @@ export default function HistoryLayout() {
         <img className="md:w-2/5 object-cover " src={BioImage} alt="Myself" />
         <div className="md:w-3/5 flex flex-col justify-center bg-purple-700 py-6 px-4">
           <h2 className="text-center text-2xl md:text-3xl pb-8 font-bold text-white">{t("history.bio.title")}</h2>
-          <p className="text-base md:text-xl px-4 text-center leading-loose text-white">
+          <p className="text-base md:text-xl text-center leading-loose text-white">
             {t("history.bio.text")}
           </p>
         </div>
@@ -121,21 +131,21 @@ export default function HistoryLayout() {
         {/* Bilanciamento */}
         <img src={Budismo} alt="Budismo" className="w-full h-auto object-cover" />
         <div className="bg-yellow-400 px-4 py-6 flex flex-col gap-6 justify-center items-center">
-          <h2 className="text-center font-bold text-2xl md:text-3xl pb-2 lg:pb-8">{t("history.sections.balance.title")}</h2>
+          <h2 className="text-center font-bold text-xl md:text-3xl pb-2 lg:pb-8">{t("history.sections.balance.title")}</h2>
           <p className="text-base md:text-xl px-2 sm:px-4 leading-loose">{t("history.sections.balance.text")}</p>
         </div>
 
         {/* Cultura */}
         <img src={JapanCultureBonsai} alt="JapanCultureBonsai" className="w-full h-auto object-cover" />
         <div className="bg-yellow-400 px-4 py-6 flex flex-col gap-6 justify-center items-center">
-          <h2 className="text-center font-bold text-2xl md:text-3xl pb-2 lg:pb-8">{t("history.sections.culture.title")}</h2>
+          <h2 className="text-center font-bold text-xl md:text-3xl pb-2 lg:pb-8">{t("history.sections.culture.title")}</h2>
           <p className="text-base sm:text-xl px-2 sm:px-4 leading-loose">{t("history.sections.culture.text")}</p>
         </div>
 
         {/* Sport */}
         <img src={basketball1} alt="basketball1" className="w-full h-auto object-cover" />
         <div className="bg-yellow-400 px-4 py-6 flex flex-col gap-6 justify-center items-center">
-          <h2 className="text-center font-bold text-2xl md:text-3xl pb-2 lg:pb-8">{t("history.sections.sport.title")}</h2>
+          <h2 className="text-center font-bold text-xl md:text-3xl pb-2 lg:pb-8">{t("history.sections.sport.title")}</h2>
           <p className="text-base sm:text-xl px-2 sm:px-4 leading-loose">{t("history.sections.sport.text")}</p>
         </div>
       </section>
@@ -146,30 +156,30 @@ export default function HistoryLayout() {
           {t("history.gallery.title")}
         </p>
 
-        <div className="relative w-4/5 aspect-video overflow-hidden rounded-lg shadow-lg">
+        <div className="relative w-11/12 aspect-video overflow-hidden rounded-lg shadow-lg">
           <img src={src} alt={alt} loading="lazy" className="w-full h-full object-cover" />
           <button
             onClick={prevImage}
-            className="group absolute top-1/2 left-1 px-2 py-2 flex items-center justify-center hover:bg-gray-500 rounded-full hover:bg-opacity-30"
+            className="group absolute top-1/2 left-1 px-2 py-2 flex items-center justify-center lg:hover:bg-gray-500 rounded-full hover:bg-opacity-30"
             data-tooltip-id="prevImg-tooltip"
-            data-tooltip-content={t('tooltip.prevImg')}
+            data-tooltip-content={!open && isLargeScreen ? t('tooltip.prevImg') : undefined}
           >
             <Tooltip id="prevImg-tooltip" className="!text-sm" />
-            <FaChevronLeft className="text-xl group-hover:text-2xl" />
+            <FaChevronLeft className="text-sm md:text-xl lg:group-hover:text-2xl" />
           </button>
           <button
             onClick={nextImage}
-            className="group absolute top-1/2 right-1 px-2 py-2 flex items-center justify-center hover:bg-gray-500 rounded-full hover:bg-opacity-30"
+            className="group absolute top-1/2 right-1 px-2 py-2 flex items-center justify-center lg:hover:bg-gray-500 rounded-full hover:bg-opacity-30"
             data-tooltip-id="nextImg-tooltip"
-            data-tooltip-content={t('tooltip.nextImg')}
+            data-tooltip-content={!open && isLargeScreen ? t('tooltip.nextImg') : undefined}
           >
             <Tooltip id="nextImg-tooltip" className="!text-sm" />
-            <FaChevronRight className="text-xl group-hover:text-2xl" />
+            <FaChevronRight className="text-sm md:text-xl lg:group-hover:text-2xl" />
           </button>
         </div>
 
         {/* Descrizione */}
-        <p className="my-6 text-base sm:text-xl text-center">{description}</p>
+        <p className="my-6 mx-2 text-base sm:text-xl text-center">{description}</p>
 
         {/* Indicatori */}
         <div className="flex gap-2">
@@ -177,7 +187,7 @@ export default function HistoryLayout() {
             <button
               key={i}
               onClick={() => handleManualChange(i)}
-              className={`w-3 h-3 rounded-full ${i === currentIndex ? 'bg-black' : 'bg-gray-300'}`}
+              className={`w-3 h-3 md:w-5 md:h-5 rounded-full ${i === currentIndex ? 'bg-black' : 'bg-gray-300'}`}
             />
           ))}
         </div>

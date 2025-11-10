@@ -18,7 +18,7 @@
   "home": {
     "intro": {
       "title": "BUILDING MY PATH",
-      "text": "Passionate about programming, with junior-level experience and a strong determination to build a solid career in development. I created this page to showcase what I can do. It was built with React and Tailwind, and in the “Projects” section you’ll find work done in other programming languages I know. I hope you enjoy it. feel free to get in touch!"
+      "text": "Passionate about programming, with junior-level experience and a strong determination to build a solid career in development. I created this page to showcase my foundational skills as a programmer. The page is built with React and Tailwind, is accessible from any device, and you can switch the language to Spanish, Italian, or English using the navigation bar or dropdown menu. In the “Projects” section, you’ll find work developed with other languages I know. I hope you enjoy it! Feel free to get in touch."
     },
     "knowledge": {
       "title": "MY KNOWLEDGE",
@@ -46,8 +46,8 @@
       "all": "All"
     },
     "FilterTitle": {
-      "Completed": "PROJECTS THAT HAVE BEEN COMPLETED",
-      "In progress": "PROJECTS I'M CURRENTLY WORKING ON",
+      "Completed": "FINISHED PROJECTS",
+      "In progress": "CURRENTLY WORKING ON",
       "Future ideas": "UPCOMING PROJECTS",
       "all": "ALL MY PROJECTS"
     },
@@ -90,7 +90,7 @@
     },
     "bio": {
       "title": "Biography",
-      "text": "I didn’t follow a straight path, and I’m proud of it. Every change helped me see the world better. A few years ago, I found my passion for work, and with effort and dedication, I entered the field. I’m a father, and that gives more meaning to everything I do. I want to build something important that my son can be proud of. This page is where I start, not where I finish."
+      "text": "I didn’t follow a straight path, and I’m proud of it. Every change helped me see the world better. A few years ago, I found my passion for work, and with effort and dedication, I entered the field. I’m a father, and that gives more meaning to everything I do. I want to build something important that my son can be proud of."
     },
     "sections": {
       "title": "VISION AND LESSONS",

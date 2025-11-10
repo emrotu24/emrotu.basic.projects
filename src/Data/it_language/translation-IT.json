@@ -19,7 +19,7 @@
   "home": {
     "intro": {
       "title": "COSTRUENDO IL MIO CAMMINO",
-      "text": "Appassionato di programmazione, con esperienza junior e una forte determinazione a costruire una carriera solida nel mondo dello sviluppo. Ho deciso di creare questa pagina per mostrare le mie competenze di base come programmatore. La pagina è realizzata con React e Tailwind, mentre nella sezione “Progetti” trovi lavori sviluppati con altri linguaggi che conosco. Spero ti piaccia! Non esitare a contattarmi."
+      "text": "Appassionato di programmazione, con esperienza junior e una forte determinazione a costruire una carriera solida nel mondo dello sviluppo. Ho deciso di creare questa pagina per mostrare le mie competenze di base come programmatore. La pagina è realizzata con React e Tailwind, è accessibile da qualsiasi dispositivo e puoi cambiare la lingua in spagnolo, italiano, inglese nella barra di navigazione o nel menu a tendina. Nella sezione “Progetti” trovi lavori sviluppati con altri linguaggi che conosco. Spero ti piaccia! Non esitare a contattarmi."
     },
     "knowledge": {
       "title": "LE MIE CONOSCENZE",
@@ -48,7 +48,7 @@
     },
     "FilterTitle": {
       "Completed": "PROGETTI CHE HO COMPLETATO",
-      "In progress": "PROGETTI SU CUI STO LAVORANDO",
+      "In progress": "CI STO LAVORANDO",
       "Future ideas": "PROSSIMI PROGETTI",
       "all": "TUTTI I MIEI PROGETTI"
     },
@@ -95,7 +95,7 @@
     },
     "bio": {
       "title": "Biografia",
-      "text": "Non ho seguito un percorso lineare, e ne sono fiero. Ogni deviazione ha ampliato il mio sguardo sul mondo. Da qualche anno ho trovato la mia passione professionale e, con impegno e dedizione, sono riuscito a entrare nel settore. Sono padre e questo da un senso maggiore ad ogni cosa che faccio, vorrei creare qualcosa di importante e che mio figlio possa esserre orgoglioso di me. Questa pagina è il mio punto di partenza, non il traguardo."
+      "text": "Non ho seguito un percorso lineare, e ne sono fiero. Ogni deviazione ha ampliato il mio sguardo sul mondo. Da qualche anno ho trovato la mia passione professionale e, con impegno e dedizione, sono riuscito a entrare nel settore. Sono padre e questo da un senso maggiore ad ogni cosa che faccio, vorrei creare qualcosa di importante e che mio figlio possa esserre orgoglioso di me."
     },
     "sections": {
       "title": "VISIONE E INSEGNAMENTI",
