@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import { Tooltip } from 'react-tooltip';
+import { Link } from 'react-router-dom';
 
 export default function ProjectsLayout() {
     const { t } = useTranslation();
@@ -127,6 +128,13 @@ export default function ProjectsLayout() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-32 lg:mt-48 mb-5 mx-4 sm:mx-10">
                 {filteredProjects.map((projects, index) => {
                     const isClickable = projects.link && projects.link.trim() !== '';
+                    const isExternal = isClickable && projects.link.startsWith('http');
+                    const isStaticLocal = isClickable && projects.link.startsWith('projects/');
+                    const href = isExternal
+                    ? projects.link
+                    : isStaticLocal
+                        ? `${import.meta.env.BASE_URL}${projects.link}`
+                        : projects.link;
 
                     const sectionContent = (
                     <section
@@ -152,22 +160,26 @@ export default function ProjectsLayout() {
                     </section>
                     );
 
-                    return isClickable ? (
+                    if (!isClickable) {
+                    return <div key={index}>{sectionContent}</div>;
+                    }
+
+                    return (
                     <a
-                        href={`${import.meta.env.BASE_URL}${projects.link}`}
+                        href={href}
                         target="_blank"
                         rel="noopener noreferrer"
                         key={index}
                     >
                         {sectionContent}
                     </a>
-                    ) : (
-                    <div key={index}>
-                        {sectionContent}
-                    </div>
                     );
                 })}
-            </div>
+                </div>
+
+
+
+
 
         </section>
     );
